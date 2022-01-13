@@ -9,10 +9,10 @@ echo "MY_TOOLCHAIN_PATH: '$MY_TOOLCHAIN_PATH'"
 echo "MY_IDE_CMD: $MY_IDE_CMD"
 
 echo "vorher: $PATH"
-PATH=$PATH;$TOOLCHAIN_PATH
+export PATH=$PATH:$TOOLCHAIN_PATH
 echo "nachher: $PATH"
 
-echo "executing $MY_IDE_CMD"
-$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data "$GITHUB_WORKSPACE" -build $1
+echo "executing: '$MY_IDE_CMD'"
+$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data '$GITHUB_WORKSPACE' -build $1
 
 echo "finished"

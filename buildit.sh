@@ -16,9 +16,7 @@ $MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.man
 $MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build ClimbObc/Debug 
 
 ls -al /github/workspace/Debug
-ls -al /github/workspace/Release
+ls -al ./Debug
 
 
-echo "::set-output name=axf::/github/workspace/Debug/ClimbObc.axf"
-
-echo "finished"
+echo "::set-output name=axf::./Debug/ClimbObc.axf"

@@ -12,12 +12,12 @@ export PATH=$PATH:$MY_TOOLCHAIN_PATH
 echo "executing: '$MY_IDE_CMD'"
 
 $MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -import $GITHUB_WORKSPACE -import $GITHUB_WORKSPACE/ado-chip-175x-6x/ado_chip_175x_6x
-$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build ado_chip_175x_6x/TestConfig_2 -build ClimbObc/Debug
+$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build ClimbObc/Debug -build ado_chip_175x_6x/TestConfig_2 
 
 ls -al /github/workspace/Debug
 ls -al /github/workspace/Release
 
 
-echo "::set-output name=afx::/github/workspace/Debug/ClimbObc.axf"
+echo "::set-output name=axf::/github/workspace/Debug/ClimbObc.axf"
 
 echo "finished"

@@ -11,8 +11,8 @@ export PATH=$PATH:$MY_TOOLCHAIN_PATH
 
 echo "executing: '$MY_IDE_CMD'"
 
-$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -importAll $GITHUB_WORKSPACE
-$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build all
+$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -import $GITHUB_WORKSPACE
+$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build ClimbObc
 
 ls -Ral /github/workspace/Debug
 ls -Ral /github/workspace/Release

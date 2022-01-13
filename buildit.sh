@@ -11,8 +11,8 @@ export PATH=$PATH:$MY_TOOLCHAIN_PATH
 
 echo "executing: '$MY_IDE_CMD'"
 
-$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -import $GITHUB_WORKSPACE
-$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build ClimbObc
+$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -import $GITHUB_WORKSPACE -import $GITHUB_WORKSPACE/ado-chip-175x-6x/ado_chip_175x_6x
+$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build ClimbObc/Debug
 
 ls -Ral /github/workspace/Debug
 ls -Ral /github/workspace/Release

@@ -5,7 +5,7 @@ MY_TOOLCHAIN_PATH=$MY_IDE_PATH/ide/tools/bin
 MY_IDE_CMD=$MY_IDE_PATH/ide/mcuxpressoide
 export PATH=$PATH:$MY_TOOLCHAIN_PATH
 
-ls -R /github/workspace
+ls -Ral /github/workspace
 
 
 

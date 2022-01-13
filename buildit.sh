@@ -12,6 +12,6 @@ ls -R /github/workspace
 echo "executing: '$MY_IDE_CMD'"
 
 $MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -importAll $GITHUB_WORKSPACE
-$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -data $GITHUB_WORKSPACE -build $1
+$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build all
 
 echo "finished"

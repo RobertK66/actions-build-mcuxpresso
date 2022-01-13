@@ -5,7 +5,7 @@ MY_TOOLCHAIN_PATH=$MY_IDE_PATH/ide/tools/bin
 MY_IDE_CMD=$MY_IDE_PATH/ide/mcuxpressoide
 export PATH=$PATH:$MY_TOOLCHAIN_PATH
 
-ls -Ral /github/workspace
+#ls -Ral /github/workspace
 
 
 
@@ -13,5 +13,8 @@ echo "executing: '$MY_IDE_CMD'"
 
 $MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -importAll $GITHUB_WORKSPACE
 $MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build all
+
+ls -Ral /github/workspace/Debug
+ls -Ral /github/workspace/Release
 
 echo "finished"

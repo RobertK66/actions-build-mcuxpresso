@@ -5,7 +5,7 @@ inputs:
     description: 'the sub folder containing the MCU Project to build'
     required: true
 outputs:
-  afx:
+  axf:
     description: The build binary file
 runs:
   using: 'docker'

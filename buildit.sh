@@ -14,8 +14,8 @@ $MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.man
 $MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build ado_chip_175x_6x/TestConfig_2 
 $MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build ClimbObc/Debug 
 
+pwd
 ls -al /github/workspace/ClimbObc/Debug
-ls -al Debug
+ls -al ClimbObc/Debug
 
-
-echo "::set-output name=axf::Debug/ClimbObc.axf"
+echo "::set-output name=axf::ClimbObc/Debug/ClimbObc.axf"

@@ -10,7 +10,7 @@ ls -Ral /github/workspace
 
 echo "executing: '$MY_IDE_CMD'"
 
-$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -import $GITHUB_WORKSPACE -import $GITHUB_WORKSPACE/ado_chip_175x_6x
+$MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -import $GITHUB_WORKSPACE/ClimbObc -import $GITHUB_WORKSPACE/ado_chip_175x_6x
 $MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build ado_chip_175x_6x/TestConfig_2 
 $MY_IDE_CMD -nosplash --launcher.suppressErrors -application org.eclipse.cdt.managedbuilder.core.headlessbuild -build ClimbObc/ClimbObc/Debug 
 

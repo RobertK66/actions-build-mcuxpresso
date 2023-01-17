@@ -2,9 +2,14 @@
 echo "Script called with args: '$*' "
 
 projects="${1}"
+configs="${2}"
 
 for projpath in $projects; do
-    echo "arg: '$projpath'"
+    echo "proj: '$projpath'"
+done
+
+for buildit in $configs; do
+    echo "cfg: '$buildit'"
 done
 
 MY_IDE_PATH=/usr/local/mcuxpressoide-11.4.0_6237

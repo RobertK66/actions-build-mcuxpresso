@@ -1,8 +1,11 @@
 name: 'Build with MCUXpresso'
 description: 'Build a project with headless run of NXP MCUXpresso'
 inputs:
-  project:
+  projects:
     description: 'the sub folder containing the MCU Project to build'
+    required: true
+  configs:
+    description: 'the config name to be build for each project'
     required: true
 outputs:
   axf:
@@ -11,5 +14,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.project }}
+    - ${{ inputs.projects }}
+    - ${{ inputs.configs }}
+    
     

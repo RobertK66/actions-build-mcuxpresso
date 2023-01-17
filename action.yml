@@ -7,6 +7,9 @@ inputs:
   configs:
     description: 'the config name to be build for each project'
     required: true
+  resultpath:
+    description: 'the file which should be used as output after build'
+    required: true
 outputs:
   axf:
     description: The build binary file
@@ -16,5 +19,6 @@ runs:
   args:
     - ${{ inputs.projects }}
     - ${{ inputs.configs }}
+    - ${{ inputs.resultpath }}
     
     

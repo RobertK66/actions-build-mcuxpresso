@@ -1,5 +1,10 @@
 #!/bin/sh
 echo "Script called with args: '$*' "
+
+for projpath in "$@"; do
+    echo "arg: '$projpath'"
+done
+
 MY_IDE_PATH=/usr/local/mcuxpressoide-11.4.0_6237
 MY_TOOLCHAIN_PATH=$MY_IDE_PATH/ide/tools/bin
 MY_IDE_CMD=$MY_IDE_PATH/ide/mcuxpressoide

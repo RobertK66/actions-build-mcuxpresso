@@ -27,5 +27,4 @@ pwd
 #ls -al /github/workspace/ClimbObc/Debug
 ls -al $resultpath
 
-#echo "::set-output name=axf::ClimbObc/Debug/ClimbObc.axf"
-echo "axf=ClimbObc/Debug/ClimbObc.axf" >> $GITHUB_OUTPUT
+echo "axf=$resultpath" >> $GITHUB_OUTPUT

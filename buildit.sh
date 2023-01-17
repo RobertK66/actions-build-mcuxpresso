@@ -1,7 +1,9 @@
 #!/bin/sh
 echo "Script called with args: '$*' "
 
-for projpath in "$@"; do
+projects="${1}"
+
+for projpath in $projects; do
     echo "arg: '$projpath'"
 done
 
